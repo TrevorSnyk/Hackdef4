@@ -7,7 +7,7 @@ pero no estamos seguros si es fidedigna la información, para estar seguros, pue
 > **http://localhost:3120/**
 
 ### Instalación del reto:
-1. Correr el archivo `start.sh`
+1. Ejecutar el archivo `start.sh`
 
 ### Writeups:
 * https://github.com/hackdef/HackDef_CTF/tree/master/HackDef4/Quals/web/100
