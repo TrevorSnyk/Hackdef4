@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Instituto de Votación Electrónica de la República de Hackdef</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+    color: #404E67;
+    background: #F5F7FA;
+    font-family: 'Open Sans', sans-serif;
+}
+.table-wrapper {
+    width: 1000px;
+    height: 250px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;  
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+
+}
+.table-title {
+    padding-bottom: 10px;
+    margin: 0 0 10px;
+}
+.table-title h2 {
+    margin: 6px 0 0;
+    font-size: 22px;
+}
+table.table {
+    table-layout: fixed;
+}
+table .absorbing-column {
+    width: 40%;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #01223f;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #46bc08;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #318fb5;
+  color: white;
+}
+form.search input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px #dee2e6;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.search button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #01223f;
+  color: white;
+  font-size: 17px;
+  border: 1px #dee2e6;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.search button:hover {
+  background: #46bc08;
+}
+
+form.search::after {
+  content: "";
+  clear: both;
+  display: table;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  padding-bottom: 50px;
+}
+.msg {
+    width: 1000;
+    text-align: center; 
+    vertical-align: middle;
+}
+.msg2 {
+    width: 1000px;
+    text-align: center; 
+    vertical-align: middle;
+    font-size: 15px;
+}
+.msg-tab{
+    width: 1000px;
+    text-align: center;
+    font-size: 17px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="/admin">Admin</a>
+  <a href="/modules">Modulos de Atención</a> 
+  <a href="/bugbountyprogram">Bug Bounty Program</a>    
+</div>
+<div class="container-lg">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+          <h4 class="msg"><strong>¿Encontraste alguna vulnerabilidad?...¡Repórtala!</strong></h4>
+          <p class="msg"><i>Envíanos la URL donde detectaste la vulnerabilidad y recibe tu recompensa en menos de 1 hora.</i></p>
+          <form class="search" action="/report" style="margin:auto;max-width:800px" method="POST">
+            <input type="text" placeholder="URL vulnerable" name="url">
+            <button type="submit"><i class="fa fa-send"></i></button>
+          </form>
+          <br>
+          {% if msg %}
+            <p class="msg2"><strong>{{ msg }}</strong>
+          {% endif %}
+    </div>
+</div> 
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Instituto de Votación Electrónica de la República de Hackdef</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+    color: #404E67;
+    background: #F5F7FA;
+    font-family: 'Open Sans', sans-serif;
+}
+
+*:focus {
+outline: none;
+}
+.login {
+margin: 150px auto;
+width: 500px;
+}
+.login-screen {
+background-color: #FFF;
+padding: 10px;
+border-radius: 5px
+}
+
+.app-title {
+text-align: center;
+color: #777;
+padding-top: 5px
+}
+
+.login-form {
+text-align: center;
+}
+.control-group {
+margin-bottom: 10px;
+}
+
+input {
+text-align: center;
+background-color: #ECF0F1;
+border: 2px solid transparent;
+border-radius: 3px;
+font-size: 16px;
+font-weight: 200;
+padding: 10px 0;
+width: 250px;
+transition: border .5s;
+}
+
+input:focus {
+border: 2px solid #46bc08;
+box-shadow: none;
+}
+
+.btn {
+border: 2px solid transparent;
+background: #01223f;
+color: #ffffff;
+font-size: 16px;
+line-height: 25px;
+padding: 10px 0;
+text-decoration: none;
+text-shadow: none;
+border-radius: 3px;
+box-shadow: none;
+transition: 0.25s;
+display: block;
+width: 250px;
+margin: 0 auto;
+}
+
+.btn:hover {
+background-color: #46bc08;
+}
+
+.login-link {
+font-size: 12px;
+color: #444;
+display: block;
+margin-top: 12px;
+}
+.verticalcenter {
+    display: table-cell;
+    height: 400px;
+    vertical-align: middle;
+}
+i {
+  background: #01223f;
+  border-radius: 20px;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 10px;
+  border-radius:70%;
+  display:inline-block;
+  padding:10px;
+}
+
+img {
+  display:block;
+}
+
+.error {
+    text-align: center; 
+    vertical-align: middle;
+    color: red;
+    font-size: 15px;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #01223f;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #46bc08;
+  color: black;
+}
+</style>
+</head>
+<body>
+<div class="topnav">
+  <a href="/admin">Admin</a>
+  <a href="/modules">Modulos de Atención</a> 
+  <a href="/bugbountyprogram">Bug Bounty Program</a>    
+</div>
+  <form action="/login" method="POST">
+    <div class="login">
+      <div class="login-screen">
+        <div class="app-title">
+          <i><img src="/static/img/vote.png" width="80"></i>
+          <h2>Panel de Administración</h2>
+          <br>
+        </div>
+        <div class="login-form">
+          <div class="control-group">
+            <input type="text" class="login-field" value="" placeholder="usuario" name="username" value="{{
+          request.form.username }}">
+            <label class="login-field-icon fui-user" for="login-name"></label></div>
+            <div class="control-group">
+              <input type="password" class="login-field" value="" placeholder="contraseña" name="password" value="{{
+          request.form.password }}">
+              <label class="login-field-icon fui-lock" for="login-pass"></label></div>
+              <input type="submit" value="Ingresar" class="btn">
+              <br>
+              {% if error %}
+                <p class="error"><strong>Error:</strong> {{ error }}
+              {% endif %}
+              <br><br>
+            </div>
+          </div>
+        </div>
+      </form>
+    </body>
+</html>
+
