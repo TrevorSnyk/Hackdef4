@@ -7,3 +7,5 @@ By [**@nogagmx**](https://twitter.com/nogagmx)
 
 ### Instalación del reto:
 1. Ejecutar el archivo `start.sh`
+
+> **NOTA:** Antes de comenzar, modifica la línea #10 del archivo `src/report.py` por la IP de tu servidor.
