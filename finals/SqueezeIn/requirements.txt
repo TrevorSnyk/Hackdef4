@@ -1,4 +1,4 @@
 Flask==1.1.2
-pyjwt==1.0.0
+pyjwt==1.5.1
 selenium==3.141.0
 
