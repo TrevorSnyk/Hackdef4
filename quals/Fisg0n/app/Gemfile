@@ -4,14 +4,14 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-gem 'activerecord'
-gem 'activesupport'
+gem 'activerecord', '>= 6.1.7.3'
+gem 'activesupport', '>= 6.1.7.3'
 gem 'sinatra-activerecord'
-gem 'sinatra-contrib'
+gem 'sinatra-contrib', '>= 2.2.3'
 gem 'sinatra-flash'
 gem 'sqlite3'
 gem 'rake'
 gem 'bundler'
-gem 'sinatra'
+gem 'sinatra', '>= 2.2.3'
 gem 'activerecord-reset-pk-sequence'
 gem 'whenever'
