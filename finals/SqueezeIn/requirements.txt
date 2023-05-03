@@ -1,4 +1,4 @@
-Flask==1.1.2
+Flask==2.2.5
 pyjwt==1.0.0
 selenium==3.141.0
 
