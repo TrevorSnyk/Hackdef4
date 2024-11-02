@@ -1,3 +1,4 @@
 Flask==1.1.2
 pyjwt==1.0.0
 pyotp==2.4.0
+werkzeug>=3.0.6 # not directly required, pinned by Snyk to avoid a vulnerability
